@@ -55,9 +55,10 @@ plot(graph.adjacency(x, mode='undirected'))
 - Assume that the observations have a multivariate Gaussian distribution with
 mean $\mu$ and covariance matrix $\Sigma$.
 
-- The <span class='blue'>inverse covariance matrix</span> $\Theta = \Sigma^{-1}$ contains information about the
-<span class='blue'>partial covariances</span> between each pair of nodes conditioned on all other
-variables (ESL.)
+- The <span class='blue'>inverse covariance matrix</span> 
+  $\Theta = \Sigma^{-1}$ (aka concentration matrix or precision matrix) 
+  contains information about the <span class='blue'>partial covariances</span> 
+  between each pair of nodes conditioned on all other variables (ESL.)
 
 - If the $ij$th component of $\Theta$ is zero, then variables $i$ and $j$ are
   conditionally independent, given the other variables.
@@ -73,7 +74,12 @@ variables (ESL.)
 
 >- In some cases, you expect that the underlying data should be sparse.
 >- Want to only keep significant edges.
->- An $L_1$ penalty can be used to induce sparsenes.
+>- An $L_1$ penalty on the estimation of $\Sigma^{-1}$ can be used to induce 
+   sparseness.
+
+---.segue .dark
+
+## Using the Lasso for Sparse Graphical Models
 
 ---
 
@@ -87,6 +93,21 @@ variables (ESL.)
 - Shown asymptotically to find nonzero components
 
 ---
+
+## Exact solutions
+
+Other authors have suggested exact solutions:
+
+- Yuan & Lin (2007)
+- Banerjee et al. (2007)
+- Dahl et al. (2007)
+
+[Interior point optimization](http://en.wikipedia.org/wiki/Interior_point_method)
+is used to determine an exact maximiation.
+
+---
+
+
 
 ## System info
 

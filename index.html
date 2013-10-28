@@ -107,9 +107,10 @@ chapter 17 for an overview of undirected graphical models.</p>
 <ul>
 <li><p>Assume that the observations have a multivariate Gaussian distribution with
 mean \(\mu\) and covariance matrix \(\Sigma\).</p></li>
-<li><p>The <span class='blue'>inverse covariance matrix</span> \(\Theta = \Sigma^{-1}\) contains information about the
-<span class='blue'>partial covariances</span> between each pair of nodes conditioned on all other
-variables (ESL.)</p></li>
+<li><p>The <span class='blue'>inverse covariance matrix</span> 
+\(\Theta = \Sigma^{-1}\) (aka concentration matrix or precision matrix) 
+contains information about the <span class='blue'>partial covariances</span> 
+between each pair of nodes conditioned on all other variables (ESL.)</p></li>
 <li><p>If the $ij$th component of \(\Theta\) is zero, then variables \(i\) and \(j\) are
 conditionally independent, given the other variables.</p></li>
 </ul>
@@ -127,6 +128,32 @@ conditionally independent, given the other variables.</p></li>
 
       <slide class="" id="slide-5" style="background:;">
   <hgroup>
+    <h2>Sparse Graphical Models</h2>
+  </hgroup>
+  <article>
+    <ul class = "build">
+<li>In some cases, you expect that the underlying data should be sparse.</li>
+<li>Want to only keep significant edges.</li>
+<li>An \(L_1\) penalty on the estimation of \(\Sigma^{-1}\) can be used to induce 
+sparseness.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue dark" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Using the Lasso for Sparse Graphical Models</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
     <h2>Meinshausen and Bühlmann (2006)</h2>
   </hgroup>
   <article>
@@ -143,7 +170,27 @@ predictors.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-6" style="background:;">
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Exact solutions</h2>
+  </hgroup>
+  <article>
+    <p>Other authors have suggested exact solutions:</p>
+
+<ul>
+<li>Yuan &amp; Lin (2007)</li>
+<li>Banerjee et al. (2007)</li>
+<li>Dahl et al. (2007)</li>
+</ul>
+
+<p><a href="http://en.wikipedia.org/wiki/Interior_point_method">Interior point optimization</a>
+is used to determine an exact maximiation.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>System info</h2>
   </hgroup>
