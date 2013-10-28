@@ -236,7 +236,7 @@ maximized with respect to the mean parameter \(\mu\).</li>
 
       <slide class="segue dark" id="slide-10" style="background:;">
   <hgroup>
-    <h2>(An interesting methods discussion...)</h2>
+    <h2>An interesting methods discussion...</h2>
   </hgroup>
   <article>
     
@@ -250,15 +250,71 @@ maximized with respect to the mean parameter \(\mu\).</li>
   </hgroup>
   <article>
     <ol>
-<li>Start with \(W = S + \rhoI\). The diagonal of \(W\) remains unchanged in what
+<li>Start with \(W = S + \rho I\). The diagonal of \(W\) remains unchanged in what
 follows.</li>
 <li>For each \(j = 1,2,\ldots p,1,2,\ldots p,\ldots,\) solve the lasso problem:
-\[ min_\beta \big{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \big}\]</li>
+<span class='blue'>
+\[ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}\]
+</span>
+where \(b = W^{-1/2}_{11} s_{12}\), which takes as input the inner products 
+\(W_{11}\) and \(s_{12}\).  This gives a \(p -1\) vector solution \(\hat{\beta}\). 
+Fill in the corresponding row and column \(W\) using \(w_{12} = W_{11} \hat{\beta}\).</li>
+<li>Continue to convergence.</li>
 </ol>
 
-<h2>System info</h2>
+<p>In <code>glasso</code>, the procedure stops when the average absolute change in \(W\) is
+less than \(t \cdot  \text{ave} |S^{-\text{diag}}|\) where \(S^{-\text{diag}}\) are
+the off-diagonal elements of the empirical coveriance matrix \(S\) and \(t\) is
+a fixed threshold, set by default at 0.001.</p>
 
-<pre><code class="r">sessionInfo()
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue dark" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>An interesting algorithm discussion...</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Performance</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Simulated data for sparse and dense scenarios:</li>
+<li><p><span class='blue'>Sparse</span></p>
+
+<ul>
+<li> \((\Sigma^{-1})_{ii} = 1\), </li>
+<li>\((\Sigma^{-1})_{i,i-1} = (\Sigma^{-1})_{i-1,i} = 0.5\)</li>
+<li>0 otherwise
+-. <span class='blue'>Dense</span></li>
+<li>\((\Sigma^{-1})_{ii} = 2\),</li>
+<li>\((\Sigma^{-1})_{ii'} = 1\) otherwise</li>
+</ul></li>
+<li><p>Compared performance to <code>COVSEL</code> method from Banerjee et al. (2007).</p></li>
+<li><p><span class='red'>Result</span>: Graphical lasso is 30-4000 times faster than
+COVSEL and 2-10 slower than the approximate method.</p></li>
+<li><p>Even for dense problems, finishes in ~1min for p=1000 features. (Hard to tell
+from graph how it will scale to many more features, however).</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>System info</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">sessionInfo()
 </code></pre>
 
 <pre><code>## R version 3.0.2 (2013-09-25)

@@ -135,16 +135,58 @@ is used to determine an exact maximiation.
 
 --- .segue .dark
 
-## (An interesting methods discussion...)
+## An interesting methods discussion...
 
 ---
 
 ## Algorithm (Friedman et al. 2007):
 
-1. Start with $W = S + \rhoI$. The diagonal of $W$ remains unchanged in what
+1. Start with $W = S + \rho I$. The diagonal of $W$ remains unchanged in what
 follows.
 2. For each $j = 1,2,\ldots p,1,2,\ldots p,\ldots,$ solve the lasso problem:
-$$ min_\beta \big{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \big}$$
+<span class='blue'>
+$$ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}$$
+</span>
+   where $b = W^{-1/2}_{11} s_{12}$, which takes as input the inner products 
+  $W_{11}$ and $s_{12}$.  This gives a $p -1$ vector solution $\hat{\beta}$. 
+  Fill in the corresponding row and column $W$ using $w_{12} = W_{11} \hat{\beta}$.
+3. Continue to convergence.
+
+In `glasso`, the procedure stops when the average absolute change in $W$ is
+less than $t \cdot  \text{ave} |S^{-\text{diag}}|$ where $S^{-\text{diag}}$ are
+the off-diagonal elements of the empirical coveriance matrix $S$ and $t$ is
+a fixed threshold, set by default at 0.001.
+
+--- .segue .dark
+
+## An interesting algorithm discussion...
+
+---
+
+## Performance
+
+- Simulated data for sparse and dense scenarios:
+- <span class='blue'>Sparse</span>
+  *  $(\Sigma^{-1})_{ii} = 1$, 
+  * $(\Sigma^{-1})_{i,i-1} = (\Sigma^{-1})_{i-1,i} = 0.5$
+  * 0 otherwise
+-. <span class='blue'>Dense</span>
+  * $(\Sigma^{-1})_{ii} = 2$,
+  * $(\Sigma^{-1})_{ii'} = 1$ otherwise
+
+- Compared performance to `COVSEL` method from Banerjee et al. (2007).
+
+- <span class='red'>Result</span>: Graphical lasso is 30-4000 times faster than
+COVSEL and 2-10 slower than the approximate method.
+
+- Even for dense problems, finishes in ~1min for p=1000 features. (Hard to tell
+ from graph how it will scale to many more features, however).
+
+
+
+
+
+---
 
 ## System info
 
