@@ -222,8 +222,7 @@ Figure 2: Original network derived in Sachs et al.
 ## Cell signalling network
 
 Figure 3: Undirected graphs generated using graphical lasso with various settings for
-the regularization parameter, $\rho$.
-
+the regularization parameter, $\rho$. 
 ![Figure 3](assets/img/F3.large.jpg)
 
 ---
@@ -231,13 +230,44 @@ the regularization parameter, $\rho$.
 ## Cell signalling network
 
 Figure 4: Profile of coefficients as the total $L_1$ norm of the coefficient
-vector increases and $\rho$ decreases.
+vector increases and $\rho$ decreases. (The density of network increases as 
+$L_1$ increases.)
 
 ![Figure 4](assets/img/F4.large.jpg)
+
+---
+
+## Cell signalling network
+
+Figure 5: LHS - tenfold cross-validation. RHS - regression sum of squares of
+the exact graphical lasso vs. Meinhausen-Buhlmann approximation.
+
+![Figure 5](assets/img/F5.large.jpg)
+
+--- .segue .dark
+
+## Summary
+
+---
+
+## Summary
+
+1. Friedmann et al. present a fast $L_1$ penalized approach for inducing
+sparsity in graphical models.
+2. Builds on previous methods, starting with the blockwise coordinate descent
+approach from Banerjee et al. (2007.)
+3. Method arrives at at exact result and performs significantly faster
+than previous methods.
+4. Free implementation of the graphical lasso written in fortran and R is
+available: `glasso`.
 
 --- .references
 
 ## References
+
+- J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  *Biostatistics*  **9**  432-441  [10.1093/biostatistics/kxm045](http://dx.doi.org/10.1093/biostatistics/kxm045)
+- Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  *The Annals of Statistics*  **34**  1436-1462  [10.1214/009053606000000281](http://dx.doi.org/10.1214/009053606000000281)
+- K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  *Science*  **308**  523-529  [10.1126/science.1105809](http://dx.doi.org/10.1126/science.1105809)
 
 
 

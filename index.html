@@ -372,9 +372,8 @@ the method is applied to cytometry data from Sach et al. (2003) </p>
   </hgroup>
   <article>
     <p>Figure 3: Undirected graphs generated using graphical lasso with various settings for
-the regularization parameter, \(\rho\).</p>
-
-<p><img src="assets/img/F3.large.jpg" alt="Figure 3"></p>
+the regularization parameter, \(\rho\). 
+<img src="assets/img/F3.large.jpg" alt="Figure 3"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -386,7 +385,8 @@ the regularization parameter, \(\rho\).</p>
   </hgroup>
   <article>
     <p>Figure 4: Profile of coefficients as the total \(L_1\) norm of the coefficient
-vector increases and \(\rho\) decreases.</p>
+vector increases and \(\rho\) decreases. (The density of network increases as 
+\(L_1\) increases.)</p>
 
 <p><img src="assets/img/F4.large.jpg" alt="Figure 4"></p>
 
@@ -394,9 +394,23 @@ vector increases and \(\rho\) decreases.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="references" id="slide-20" style="background:;">
+      <slide class="" id="slide-20" style="background:;">
   <hgroup>
-    <h2>References</h2>
+    <h2>Cell signalling network</h2>
+  </hgroup>
+  <article>
+    <p>Figure 5: LHS - tenfold cross-validation. RHS - regression sum of squares of
+the exact graphical lasso vs. Meinhausen-Buhlmann approximation.</p>
+
+<p><img src="assets/img/F5.large.jpg" alt="Figure 5"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="segue dark" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
   </hgroup>
   <article>
     
@@ -404,7 +418,42 @@ vector increases and \(\rho\) decreases.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-21" style="background:;">
+      <slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Friedmann et al. present a fast \(L_1\) penalized approach for inducing
+sparsity in graphical models.</li>
+<li>Builds on previous methods, starting with the blockwise coordinate descent
+approach from Banerjee et al. (2007.)</li>
+<li>Method arrives at at exact result and performs significantly faster
+than previous methods.</li>
+<li>Free implementation of the graphical lasso written in fortran and R is
+available: <code>glasso</code>.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="references" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>References</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  <em>Biostatistics</em>  <strong>9</strong>  432-441  <a href="http://dx.doi.org/10.1093/biostatistics/kxm045">10.1093/biostatistics/kxm045</a></li>
+<li>Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  <em>The Annals of Statistics</em>  <strong>34</strong>  1436-1462  <a href="http://dx.doi.org/10.1214/009053606000000281">10.1214/009053606000000281</a></li>
+<li>K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  <em>Science</em>  <strong>308</strong>  523-529  <a href="http://dx.doi.org/10.1126/science.1105809">10.1126/science.1105809</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>System info</h2>
   </hgroup>
