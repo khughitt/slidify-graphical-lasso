@@ -150,6 +150,8 @@ follows.
 2. For each $j = 1,2,\ldots p,1,2,\ldots p,\ldots,$ solve the lasso problem:
 $$ min_\beta \big{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \big}$$
 
+---
+
 ## System info
 
 ```{r sysinfo}

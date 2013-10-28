@@ -236,7 +236,7 @@ maximized with respect to the mean parameter \(\mu\).</li>
 
       <slide class="segue dark" id="slide-10" style="background:;">
   <hgroup>
-    <h2>(method discussion...)</h2>
+    <h2>(An interesting methods discussion...)</h2>
   </hgroup>
   <article>
     
@@ -246,10 +246,19 @@ maximized with respect to the mean parameter \(\mu\).</li>
 
       <slide class="" id="slide-11" style="background:;">
   <hgroup>
-    <h2>System info</h2>
+    <h2>Algorithm (Friedman et al. 2007):</h2>
   </hgroup>
   <article>
-    <pre><code class="r">sessionInfo()
+    <ol>
+<li>Start with \(W = S + \rhoI\). The diagonal of \(W\) remains unchanged in what
+follows.</li>
+<li>For each \(j = 1,2,\ldots p,1,2,\ldots p,\ldots,\) solve the lasso problem:
+\[ min_\beta \big{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \big}\]</li>
+</ol>
+
+<h2>System info</h2>
+
+<pre><code class="r">sessionInfo()
 </code></pre>
 
 <pre><code>## R version 3.0.2 (2013-09-25)
