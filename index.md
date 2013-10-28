@@ -182,7 +182,11 @@ COVSEL and 2-10 slower than the approximate method.
 - Even for dense problems, finishes in ~1min for p=1000 features. (Hard to tell
  from graph how it will scale to many more features, however).
 
+---
 
+# Performance
+
+![Figure 1](assets/img/F1.large.jpg)
 
 
 
