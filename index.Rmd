@@ -16,10 +16,16 @@ Graphical models provide ... to represent the conditional dependencies between
 a number of random variables. They provide a visual way of representing the
 joint distribution of the entire set of RVs (Hastie et al, 2009.)
 
-Components
+Components:
 - <span class='blue2'>Vertices</span>: random variables
 - <span class='blue2'>Edges</span>: condition dependencies between RVs
 
+Types:
+- <span class='blue2'>Directed</span>: Bayesian networks (causal relationships)
+- <span class='blue2'>Undirected</span>: Markov random fields / Markov networks
+
+See [ESL](http://www-stat.stanford.edu/~tibs/ElemStatLearn/) chapter 18 for
+basics of undirected graphical models.
 ---
 
 ## Graphical Models
