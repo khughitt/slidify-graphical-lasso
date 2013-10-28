@@ -39,32 +39,12 @@
           </slide>
 
     <!-- SLIDES -->
-      <slide class="" id="slide-1" style="background:;">
+      <slide class="segue dark" id="slide-1" style="background:;">
   <hgroup>
     <h2>Graphical Models</h2>
   </hgroup>
   <article>
-    <p>Graphical models provide ... to represent the conditional dependencies between
-a number of random variables. They provide a visual way of representing the
-joint distribution of the entire set of RVs (Hastie et al, 2009.)</p>
-
-<p><span class='blue2'>Components:</span></p>
-
-<ul>
-<li>Vertices: random variables</li>
-<li>Edges: condition dependencies between RVs</li>
-</ul>
-
-<p><span class='blue2'>Types:</span></p>
-
-<ul>
-<li>Directed: Bayesian networks (causal relationships)</li>
-<li>Undirected: Markov random fields / Markov networks</li>
-</ul>
-
-<p>See <a href="http://www-stat.stanford.edu/%7Etibs/ElemStatLearn/">ESL</a> chapter 17 for
-basics of undirected graphical models.</p>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -74,7 +54,39 @@ basics of undirected graphical models.</p>
     <h2>Graphical Models</h2>
   </hgroup>
   <article>
-    <ul>
+    <p>Graphical models provide a way to represent the conditional dependencies 
+between a number of random variables. They provide a visual way of representing 
+the joint distribution of the entire set of RVs.</p>
+
+<p><span class='red'>Components:</span></p>
+
+<ul>
+<li>Vertices: random variables</li>
+<li>Edges: condition dependencies between RVs</li>
+</ul>
+
+<p><span class='red'>Types:</span></p>
+
+<ul>
+<li>Directed: <code>Bayesian networks</code> (causal relationships)</li>
+<li>Undirected: <code>Markov random fields</code> / <code>Markov networks</code></li>
+</ul>
+
+<p>See <a href="http://www-stat.stanford.edu/%7Etibs/ElemStatLearn/">The Elements of Statistical Learning (ESM)</a>
+chapter 17 for an overview of undirected graphical models.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Graphical Models</h2>
+  </hgroup>
+  <article>
+    <p>Constructing graphical models from data:</p>
+
+<ul>
 <li><span class='blue2'>Model selection</span>: choosing the structure of the graph.</li>
 <li><span class='blue2'>Learning</span>: Estimating edge weights from data.</li>
 </ul>
@@ -85,25 +97,35 @@ basics of undirected graphical models.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-3" style="background:;">
+      <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Inverse Covariance Matrix</h2>
+    <h2>Undirected Graphical Models</h2>
   </hgroup>
   <article>
-    <p>The inverse covariance matrix \(\Theta = \Sigma^{-1}\) contains information about the
-<i>partial covariances</i> between each pair of nodes conditioned on all other
-variables (ESL.)</p>
+    <h3>Gaussian Graphical Models</h3>
 
 <ul>
-<li>If the $ij$th component of \(\Theta\) is zero, then variables \(i\) and \(j\) are
-conditionally independent, given the other variables.</li>
+<li><p>Assume that the observations have a multivariate Gaussian distribution with
+mean \(\mu\) and covariance matrix \(\Sigma\).</p></li>
+<li><p>The <span class='blue'>inverse covariance matrix</span> \(\Theta = \Sigma^{-1}\) contains information about the
+<span class='blue'>partial covariances</span> between each pair of nodes conditioned on all other
+variables (ESL.)</p></li>
+<li><p>If the $ij$th component of \(\Theta\) is zero, then variables \(i\) and \(j\) are
+conditionally independent, given the other variables.</p></li>
+</ul>
+
+<h3>Covariance graphs</h3>
+
+<ul>
+<li>In covariance graphs or relevance networks, edges are present when the
+<span class='blue'>covariance</span> is non-zero.</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-4" style="background:;">
+      <slide class="" id="slide-5" style="background:;">
   <hgroup>
     <h2>Meinshausen and Bühlmann (2006)</h2>
   </hgroup>
@@ -114,18 +136,48 @@ conditionally independent, given the other variables.</li>
 predictors.</li>
 <li>Considered nonzero if \(\Sigma^{-1}_{ij} \neq 0\) AND/OR 
 \(\Sigma^{-1}_{ji} \neq 0\)</li>
+<li>Shown asymptotically to find nonzero components</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-5" style="background:;">
+      <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    
+    <h2>System info</h2>
   </hgroup>
   <article>
-    
+    <pre><code class="r">sessionInfo()
+</code></pre>
+
+<pre><code>## R version 3.0.2 (2013-09-25)
+## Platform: x86_64-unknown-linux-gnu (64-bit)
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C             
+##  [3] LC_TIME=en_US.utf8        LC_COLLATE=en_US.utf8    
+##  [5] LC_MONETARY=en_US.utf8    LC_MESSAGES=en_US.utf8   
+##  [7] LC_PAPER=en_US.utf8       LC_NAME=C                
+##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
+## [11] LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] slidify_0.3.3       devtools_1.3        glasso_1.7         
+##  [4] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+##  [7] igraph_0.6.5-2      colorout_1.0-0      vimcom_0.9-9       
+## [10] setwidth_1.0-3     
+## 
+## loaded via a namespace (and not attached):
+##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
+##  [5] markdown_0.6.3 memoise_0.1    parallel_3.0.2 RCurl_1.95-4.1
+##  [9] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  XML_3.98-1.1  
+## [13] xtable_1.7-1   yaml_2.1.8
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>

@@ -8,28 +8,35 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+
+--- .segue .dark
+
+## Graphical Models
+
 ---
 
 ## Graphical Models
 
-Graphical models provide ... to represent the conditional dependencies between
-a number of random variables. They provide a visual way of representing the
-joint distribution of the entire set of RVs (Hastie et al, 2009.)
+Graphical models provide a way to represent the conditional dependencies 
+between a number of random variables. They provide a visual way of representing 
+the joint distribution of the entire set of RVs.
 
-<span class='blue2'>Components:</span>
+<span class='red'>Components:</span>
 - Vertices: random variables
 - Edges: condition dependencies between RVs
 
-<span class='blue2'>Types:</span>
-- Directed: Bayesian networks (causal relationships)
-- Undirected: Markov random fields / Markov networks
+<span class='red'>Types:</span>
+- Directed: `Bayesian networks` (causal relationships)
+- Undirected: `Markov random fields` / `Markov networks`
 
-See [ESL](http://www-stat.stanford.edu/~tibs/ElemStatLearn/) chapter 17 for
-basics of undirected graphical models.
+See [The Elements of Statistical Learning (ESM)](http://www-stat.stanford.edu/~tibs/ElemStatLearn/)
+chapter 17 for an overview of undirected graphical models.
 
 ---
 
 ## Graphical Models
+
+Constructing graphical models from data:
 
 * <span class='blue2'>Model selection</span>: choosing the structure of the graph.
 * <span class='blue2'>Learning</span>: Estimating edge weights from data.
@@ -42,14 +49,31 @@ plot(graph.adjacency(x, mode='undirected'))
 ```
 ---
 
-## Inverse Covariance Matrix
+## Undirected Graphical Models
 
-The inverse covariance matrix $\Theta = \Sigma^{-1}$ contains information about the
-<i>partial covariances</i> between each pair of nodes conditioned on all other
+### Gaussian Graphical Models
+- Assume that the observations have a multivariate Gaussian distribution with
+mean $\mu$ and covariance matrix $\Sigma$.
+
+- The <span class='blue'>inverse covariance matrix</span> $\Theta = \Sigma^{-1}$ contains information about the
+<span class='blue'>partial covariances</span> between each pair of nodes conditioned on all other
 variables (ESL.)
 
 - If the $ij$th component of $\Theta$ is zero, then variables $i$ and $j$ are
   conditionally independent, given the other variables.
+
+### Covariance graphs
+
+- In covariance graphs or relevance networks, edges are present when the
+<span class='blue'>covariance</span> is non-zero.
+
+---
+
+## Sparse Graphical Models
+
+>- In some cases, you expect that the underlying data should be sparse.
+>- Want to only keep significant edges.
+>- An $L_1$ penalty can be used to induce sparsenes.
 
 ---
 
@@ -60,7 +84,14 @@ variables (ESL.)
   predictors.
 - Considered nonzero if $\Sigma^{-1}_{ij} \neq 0$ AND/OR 
   $\Sigma^{-1}_{ji} \neq 0$
+- Shown asymptotically to find nonzero components
 
 ---
+
+## System info
+
+```{r sysinfo}
+sessionInfo()
+```
 
 
