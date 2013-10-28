@@ -48,12 +48,22 @@
 a number of random variables. They provide a visual way of representing the
 joint distribution of the entire set of RVs (Hastie et al, 2009.)</p>
 
-<p>Components</p>
+<p><span class='blue2'>Components:</span></p>
 
 <ul>
-<li><span class='blue2'>Vertices</span> random variables</li>
-<li><span class='blue2'>Edges</span> missing edges imply condition independence</li>
+<li>Vertices: random variables</li>
+<li>Edges: condition dependencies between RVs</li>
 </ul>
+
+<p><span class='blue2'>Types:</span></p>
+
+<ul>
+<li>Directed: Bayesian networks (causal relationships)</li>
+<li>Undirected: Markov random fields / Markov networks</li>
+</ul>
+
+<p>See <a href="http://www-stat.stanford.edu/%7Etibs/ElemStatLearn/">ESL</a> chapter 17 for
+basics of undirected graphical models.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -65,12 +75,57 @@ joint distribution of the entire set of RVs (Hastie et al, 2009.)</p>
   </hgroup>
   <article>
     <ul>
-<li><span class='blue2'>Model selection</span> choosing the structure of the graph.</li>
-<li><span class='blue2'>Learning</span> Estimating edge weights from data.</li>
+<li><span class='blue2'>Model selection</span>: choosing the structure of the graph.</li>
+<li><span class='blue2'>Learning</span>: Estimating edge weights from data.</li>
 </ul>
 
 <p><img src="figure/pgm_example.png" alt="plot of chunk pgm_example"> </p>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Inverse Covariance Matrix</h2>
+  </hgroup>
+  <article>
+    <p>The inverse covariance matrix \(\Theta = \Sigma^{-1}\) contains information about the
+<i>partial covariances</i> between each pair of nodes conditioned on all other
+variables (ESL.)</p>
+
+<ul>
+<li>If the $ij$th component of \(\Theta\) is zero, then variables \(i\) and \(j\) are
+conditionally independent, given the other variables.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Meinshausen and Bühlmann (2006)</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Which components of \(\Sigma^{-1}\) are non-zero?</li>
+<li>Fit a lasso regression for each variable using all other variables as
+predictors.</li>
+<li>Considered nonzero if \(\Sigma^{-1}_{ij} \neq 0\) AND/OR 
+\(\Sigma^{-1}_{ji} \neq 0\)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
