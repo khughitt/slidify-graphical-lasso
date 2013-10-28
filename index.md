@@ -8,8 +8,21 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-
 --- .segue .dark
+
+<!-- Custom Styles -->
+<style type='text/css'>
+    slides > slide {
+        height: 800px;
+        margin-top: -400px;
+    }
+    img {
+        max-height: 560px;
+        max-width: 964px;
+    }
+    slide a {border-bottom: none;}
+    .references li { font-size: 18px; }
+</style>
 
 ## Graphical Models
 
@@ -81,12 +94,12 @@ mean $\mu$ and covariance matrix $\Sigma$.
 
 ## Meinshausen and Bühlmann (2006)
 
-- Which components of $\Sigma^{-1}$ are non-zero?
-- Fit a lasso regression for each variable using all other variables as
-  predictors.
-- Considered nonzero if $\Sigma^{-1}_{ij} \neq 0$ AND/OR 
-  $\Sigma^{-1}_{ji} \neq 0$
-- Shown asymptotically to find nonzero components
+>- Which components of $\Sigma^{-1}$ are non-zero?
+>- Fit a lasso regression for each variable using all other variables as
+   predictors.
+>- Considered nonzero if $\Sigma^{-1}_{ij} \neq 0$ AND/OR 
+   $\Sigma^{-1}_{ji} \neq 0$
+>- Shown asymptotically to find nonzero components
 
 ---
 
@@ -107,7 +120,26 @@ is used to determine an exact maximiation.
 
 - Exact solution based on coordinate descent approach in Banerjee et al. (2007)
 
+<span class='red' style='font-weight: 700;'>Approach</span>
+
+>- $N$ observations, $x_i, i=1,\ldots,N$ with dimension $p$, mean $\mu$ and 
+   covariance $\Sigma$
+>- let $\Theta = \Sigma^{-1}$ and let $S$ be the <span class='blue'>empirical
+   covariance matrix</span>:
+    $$S = \frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})(x_i - \overline{x})^T$$
+>- <span class='blue'>Goal:</span> Maximize the log-likelihood
+    $$\text{log det} \Theta - \text{tr}(S\Theta) - \rho\Vert \Theta \Vert_1$$
+   over non-negative definite matrices $\Theta$.
+>- Above expression is the "Gaussian log-likelihood of the data, partially
+   maximized with respect to the mean parameter $\mu$.
+
+--- .segue .dark
+
+## (method discussion...)
+
 ---
+
+
 
 ## System info
 
@@ -121,28 +153,32 @@ sessionInfo()
 ## Platform: x86_64-unknown-linux-gnu (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C             
-##  [3] LC_TIME=en_US.utf8        LC_COLLATE=en_US.utf8    
-##  [5] LC_MONETARY=en_US.utf8    LC_MESSAGES=en_US.utf8   
-##  [7] LC_PAPER=en_US.utf8       LC_NAME=C                
-##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
-## [11] LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-##  [1] slidify_0.3.3       devtools_1.3        glasso_1.7         
-##  [4] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
-##  [7] igraph_0.6.5-2      colorout_1.0-0      vimcom_0.9-9       
-## [10] setwidth_1.0-3     
+## [1] igraph_0.6.5-2 slidify_0.3.3  colorout_1.0-0 vimcom_0.9-9  
+## [5] setwidth_1.0-3
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
-##  [5] markdown_0.6.3 memoise_0.1    parallel_3.0.2 RCurl_1.95-4.1
-##  [9] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  XML_3.98-1.1  
-## [13] xtable_1.7-1   yaml_2.1.8
+## [1] evaluate_0.5.1 formatR_0.9    knitr_1.5      markdown_0.6.3
+## [5] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  yaml_2.1.8
 ```
 
+
+<!-- Custom JavaScript -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
 
 

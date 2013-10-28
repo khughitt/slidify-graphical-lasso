@@ -8,8 +8,21 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-
 --- .segue .dark
+
+<!-- Custom Styles -->
+<style type='text/css'>
+    slides > slide {
+        height: 800px;
+        margin-top: -400px;
+    }
+    img {
+        max-height: 560px;
+        max-width: 964px;
+    }
+    slide a {border-bottom: none;}
+    .references li { font-size: 18px; }
+</style>
 
 ## Graphical Models
 
@@ -85,12 +98,12 @@ mean $\mu$ and covariance matrix $\Sigma$.
 
 ## Meinshausen and Bühlmann (2006)
 
-- Which components of $\Sigma^{-1}$ are non-zero?
-- Fit a lasso regression for each variable using all other variables as
-  predictors.
-- Considered nonzero if $\Sigma^{-1}_{ij} \neq 0$ AND/OR 
-  $\Sigma^{-1}_{ji} \neq 0$
-- Shown asymptotically to find nonzero components
+>- Which components of $\Sigma^{-1}$ are non-zero?
+>- Fit a lasso regression for each variable using all other variables as
+   predictors.
+>- Considered nonzero if $\Sigma^{-1}_{ij} \neq 0$ AND/OR 
+   $\Sigma^{-1}_{ji} \neq 0$
+>- Shown asymptotically to find nonzero components
 
 ---
 
@@ -111,12 +124,39 @@ is used to determine an exact maximiation.
 
 - Exact solution based on coordinate descent approach in Banerjee et al. (2007)
 
+<span class='red' style='font-weight: 700;'>Approach</span>
+
+>- $N$ observations, $x_i, i=1,\ldots,N$ with dimension $p$, mean $\mu$ and 
+   covariance $\Sigma$
+>- let $\Theta = \Sigma^{-1}$ and let $S$ be the <span class='blue'>empirical
+   covariance matrix</span>:
+    $$S = \frac{1}{N} \sum_{i=1}^N (x_i - \overline{x})(x_i - \overline{x})^T$$
+>- <span class='blue'>Goal:</span> Maximize the log-likelihood
+    $$\text{log det} \Theta - \text{tr}(S\Theta) - \rho\Vert \Theta \Vert_1$$
+   over non-negative definite matrices $\Theta$.
+>- Above expression is the "Gaussian log-likelihood of the data, partially
+   maximized with respect to the mean parameter $\mu$.
+
+--- .segue .dark
+
+## (method discussion...)
+
 ---
+
+
 
 ## System info
 
 ```{r sysinfo}
 sessionInfo()
 ```
+
+<!-- Custom JavaScript -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type='text/javascript'>
+$(function() {
+    $("p:has(img)").addClass('centered');
+});
+</script>
 
 
