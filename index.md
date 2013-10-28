@@ -1,6 +1,6 @@
 ---
 title       : Sparse inverse covariance estimation with the graphical lasso
-subtitle    : Friedman, Jerome, Hastie, Trevor, Tibshirani, Robert
+subtitle    : Friedman, J., Hastie, T., Tibshirani, R.
 author      : Keith Hughitt
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -170,7 +170,8 @@ a fixed threshold, set by default at 0.001.
   *  $(\Sigma^{-1})_{ii} = 1$, 
   * $(\Sigma^{-1})_{i,i-1} = (\Sigma^{-1})_{i-1,i} = 0.5$
   * 0 otherwise
--. <span class='blue'>Dense</span>
+
+- <span class='blue'>Dense</span>
   * $(\Sigma^{-1})_{ii} = 2$,
   * $(\Sigma^{-1})_{ii'} = 1$ otherwise
 
@@ -265,11 +266,13 @@ available: `glasso`.
 
 ## References
 
-- J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  *Biostatistics*  **9**  432-441  [10.1093/biostatistics/kxm045](http://dx.doi.org/10.1093/biostatistics/kxm045)
-- Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  *The Annals of Statistics*  **34**  1436-1462  [10.1214/009053606000000281](http://dx.doi.org/10.1214/009053606000000281)
-- K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  *Science*  **308**  523-529  [10.1126/science.1105809](http://dx.doi.org/10.1126/science.1105809)
 
 
+
+
+- J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  <em>Biostatistics</em>  <strong>9</strong>  432-441  <a href="http://dx.doi.org/10.1093/biostatistics/kxm045">10.1093/biostatistics/kxm045</a>
+- Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  <em>The Annals of Statistics</em>  <strong>34</strong>  1436-1462  <a href="http://dx.doi.org/10.1214/009053606000000281">10.1214/009053606000000281</a>
+- K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  <em>Science</em>  <strong>308</strong>  523-529  <a href="http://dx.doi.org/10.1126/science.1105809">10.1126/science.1105809</a>
 
 
 ---
