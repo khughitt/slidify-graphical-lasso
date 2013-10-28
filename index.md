@@ -184,9 +184,61 @@ COVSEL and 2-10 slower than the approximate method.
 
 ---
 
-# Performance
+## Performance
 
 ![Figure 1](assets/img/F1.large.jpg)
+
+---
+
+## Cell signalling network
+
+To demonstrate the usefulness of the graphical lasso on real-world problems,
+the method is applied to cytometry data from Sach et al. (2003) 
+
+![Figure 2](assets/img/Sachs_F2.large.jpg)
+(Sachs 2003, fig 2)
+
+---
+
+## Cell signalling network
+
+![Figure 1](assets/img/Sachs_F1.large.jpg)
+
+(Sachs 2003, fig 1)
+
+---
+
+## Cell signalling network
+
+Figure 2: Original network derived in Sachs et al.
+
+![Figure 2](assets/img/F2.large.jpg)
+
+- $p$ = 11 proteins
+- $n$ = 7466 cells
+
+---
+
+## Cell signalling network
+
+Figure 3: Undirected graphs generated using graphical lasso with various settings for
+the regularization parameter, $\rho$.
+
+![Figure 3](assets/img/F3.large.jpg)
+
+---
+
+## Cell signalling network
+
+Figure 4: Profile of coefficients as the total $L_1$ norm of the coefficient
+vector increases and $\rho$ decreases.
+
+![Figure 4](assets/img/F4.large.jpg)
+
+--- .references
+
+## References
+
 
 
 
@@ -215,12 +267,14 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] igraph_0.6.5-2 slidify_0.3.3  colorout_1.0-0 vimcom_0.9-9  
-## [5] setwidth_1.0-3
+## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
+## [4] igraph_0.6.5-2      slidify_0.3.3       colorout_1.0-0     
+## [7] vimcom_0.9-9        setwidth_1.0-3     
 ## 
 ## loaded via a namespace (and not attached):
-## [1] evaluate_0.5.1 formatR_0.9    knitr_1.5      markdown_0.6.3
-## [5] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  yaml_2.1.8
+##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
+##  [5] markdown_0.6.3 RCurl_1.95-4.1 stringr_0.6.2  tools_3.0.2   
+##  [9] whisker_0.3-2  XML_3.98-1.1   xtable_1.7-1   yaml_2.1.8
 ```
 
 

@@ -192,7 +192,63 @@ COVSEL and 2-10 slower than the approximate method.
 
 ![Figure 1](assets/img/F1.large.jpg)
 
-Figure 1: CPU Seconds require for graphical lasso
+---
+
+## Cell signalling network
+
+To demonstrate the usefulness of the graphical lasso on real-world problems,
+the method is applied to cytometry data from Sach et al. (2003) 
+
+![Figure 2](assets/img/Sachs_F2.large.jpg)
+(Sachs 2003, fig 2)
+
+---
+
+## Cell signalling network
+
+![Figure 1](assets/img/Sachs_F1.large.jpg)
+
+(Sachs 2003, fig 1)
+
+---
+
+## Cell signalling network
+
+Figure 2: Original network derived in Sachs et al.
+
+![Figure 2](assets/img/F2.large.jpg)
+
+- $p$ = 11 proteins
+- $n$ = 7466 cells
+
+---
+
+## Cell signalling network
+
+Figure 3: Undirected graphs generated using graphical lasso with various settings for
+the regularization parameter, $\rho$.
+
+![Figure 3](assets/img/F3.large.jpg)
+
+---
+
+## Cell signalling network
+
+Figure 4: Profile of coefficients as the total $L_1$ norm of the coefficient
+vector increases and $\rho$ decreases.
+
+![Figure 4](assets/img/F4.large.jpg)
+
+--- .references
+
+## References
+
+```{r refs, echo=FALSE, eval=FALSE}
+library(knitcitations)
+citep("10.1093/biostatistics/kxm045")
+citep("10.1126/science.1105809")
+bibliography()
+```
 
 ---
 
