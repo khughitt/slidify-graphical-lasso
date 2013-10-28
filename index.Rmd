@@ -139,11 +139,16 @@ is used to determine an exact maximiation.
 
 --- .segue .dark
 
-## (method discussion...)
+## (An interesting methods discussion...)
 
 ---
 
+## Algorithm (Friedman et al. 2007):
 
+1. Start with $W = S + \rhoI$. The diagonal of $W$ remains unchanged in what
+follows.
+2. For each $j = 1,2,\ldots p,1,2,\ldots p,\ldots,$ solve the lasso problem:
+$$ min_\beta \big{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \big}$$
 
 ## System info
 
