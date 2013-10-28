@@ -103,7 +103,11 @@ is used to determine an exact maximiation.
 
 ---
 
+## Graphical Lasso
 
+- Exact solution based on coordinate descent approach in Banerjee et al. (2007)
+
+---
 
 ## System info
 
