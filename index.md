@@ -21,6 +21,7 @@ mode        : selfcontained # {standalone, draft}
         max-width: 964px;
     }
     slide a {border-bottom: none;}
+    .source { bottom: 35px; }
     .references li { font-size: 18px; }
 </style>
 
@@ -88,15 +89,54 @@ mean $\mu$ and covariance matrix $\Sigma$.
 
 ---.segue .dark
 
-## Cell Signaling Networks
+## Cell Signaling
+
+---
+
+## Cell signaling
+
+The basic goal of cell signaling to provide a mechanism for cells to respond
+convey a message from one part of a cell to another.
+
+![signaling basics](assets/img/1Signal_Transduction_Pathways_Model.jpg)
+<div class='source'>http://commons.wikimedia.org/wiki/File:1Signal_Transduction_Pathways_Model.jpg</div>
+
+---
+
+## Cell signaling
+
+### Examples of cell signaling
+
+- Cell to cell communication
+- Responding to host (or pathogen) molecules
+- Respond to external physiological, nutrient, etc. conditions
+
+---
+
+## Cell signaling
+
+### Cell membrane
+
+Cell signaling often begins at the cell membrane.
+![cell membrane](assets/img/1000px-Cell_membrane_detailed_diagram_en.svg.png)
+<div class='source'>Source: http://en.wikipedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg</div>
+
+---
+
+## Cell signaling
+
+### Lipid rafts
+Lipid rafts help to bring together components that function together for a
+particular signaling pathway: receptors, co-receptors, etc.
+
+![lipid rafts](assets/img/Cell-Wave-Final.png)
+<div class='source'>source: http://www.lanl.gov/science/1663/august2011/story3full.shtml</div>
 
 ---
 
 ## Cell signalling network
 
-To demonstrate the usefulness of the graphical lasso on real-world problems,
-the method is applied to cytometry data from Sachs et al. (2003) 
-
+It's not quite a 1:1 process.
 ![Figure 2](assets/img/Sachs_F2.large.jpg)
 (Sachs 2003, fig 2)
 
@@ -116,7 +156,7 @@ Figure 1B-C: Network inference using flow cytometry data (Sachs et al 2005)
 
 ---.segue .dark
 
-## Using the Lasso for Sparse Graphical Models
+## Previous Work on Using the Lasso for Sparse Graphical Models
 
 ---
 
@@ -221,10 +261,12 @@ COVSEL and 2-10 slower than the approximate method.
 
 ## Cell signalling network
 
-Figure 2: Original network derived in Sachs et al.
+To demonstrate the usefulness of the graphical lasso on real-world problems,
+the method is applied to cytometry data from Sachs et al. (2003) 
 
 ![Figure 2](assets/img/F2.large.jpg)
 
+Figure 2: Original network derived in Sachs et al.
 - $p$ = 11 proteins
 - $n$ = 7466 cells
 
@@ -310,14 +352,15 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
-## [4] igraph_0.6.5-2      slidify_0.3.3       colorout_1.0-0     
-## [7] vimcom_0.9-9        setwidth_1.0-3     
+## [1] devtools_1.3        knitcitations_0.4-7 bibtex_0.3-6       
+## [4] knitr_1.5           igraph_0.6.5-2      slidify_0.3.3      
+## [7] colorout_1.0-0      vimcom_0.9-9        setwidth_1.0-3     
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
-##  [5] markdown_0.6.3 RCurl_1.95-4.1 stringr_0.6.2  tools_3.0.2   
-##  [9] whisker_0.3-2  XML_3.98-1.1   xtable_1.7-1   yaml_2.1.8
+##  [5] markdown_0.6.3 memoise_0.1    parallel_3.0.2 RCurl_1.95-4.1
+##  [9] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  XML_3.98-1.1  
+## [13] xtable_1.7-1   yaml_2.1.8
 ```
 
 
