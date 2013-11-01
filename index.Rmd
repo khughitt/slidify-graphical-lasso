@@ -111,9 +111,10 @@ convey a message from one part of a cell to another.
 
 ### Examples of cell signaling
 
-- Cell to cell communication
+- Cell to cell communication (e.g. quorum sensing)
 - Responding to host (or pathogen) molecules
 - Respond to external physiological, nutrient, etc. conditions
+- Chemotaxis (movement)
 
 ---
 
@@ -121,7 +122,7 @@ convey a message from one part of a cell to another.
 
 ### Cell membrane
 
-Cell signaling often begins at the cell membrane.
+Cell signaling often begins at the cell membrane ("Signal transduction").
 ![cell membrane](assets/img/1000px-Cell_membrane_detailed_diagram_en.svg.png)
 <div class='source'>Source: http://en.wikipedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg</div>
 
@@ -140,7 +141,7 @@ particular signaling pathway: receptors, co-receptors, etc.
 
 ## Cell signalling network
 
-It's not quite a 1:1 process.
+It's not quite a 1:1 process...
 ![Figure 2](assets/img/Sachs_F2.large.jpg)
 (Sachs 2003, fig 2)
 
@@ -150,6 +151,16 @@ It's not quite a 1:1 process.
 
 Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
 ![Figure 1a](assets/img/Sachs_F1a.large.jpg)
+
+---
+
+## Flow Cytometry
+
+Flow cytometry is generally used for one of two things:
+1. Counting cells
+2. Sorting cells
+
+![flow cytometry](assets/img/flow-cytometry_500.jpg)
 
 ---
 
