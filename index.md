@@ -88,6 +88,34 @@ mean $\mu$ and covariance matrix $\Sigma$.
 
 ---.segue .dark
 
+## Cell Signaling Networks
+
+---
+
+## Cell signalling network
+
+To demonstrate the usefulness of the graphical lasso on real-world problems,
+the method is applied to cytometry data from Sachs et al. (2003) 
+
+![Figure 2](assets/img/Sachs_F2.large.jpg)
+(Sachs 2003, fig 2)
+
+---
+
+## Cell signalling network
+
+Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
+![Figure 1a](assets/img/Sachs_F1a.large.jpg)
+
+---
+
+## Cell signalling network
+
+Figure 1B-C: Network inference using flow cytometry data (Sachs et al 2005)
+![Figure 1bc](assets/img/Sachs_F1b.large.jpg)
+
+---.segue .dark
+
 ## Using the Lasso for Sparse Graphical Models
 
 ---
@@ -188,24 +216,6 @@ COVSEL and 2-10 slower than the approximate method.
 ## Performance
 
 ![Figure 1](assets/img/F1.large.jpg)
-
----
-
-## Cell signalling network
-
-To demonstrate the usefulness of the graphical lasso on real-world problems,
-the method is applied to cytometry data from Sach et al. (2003) 
-
-![Figure 2](assets/img/Sachs_F2.large.jpg)
-(Sachs 2003, fig 2)
-
----
-
-## Cell signalling network
-
-![Figure 1](assets/img/Sachs_F1.large.jpg)
-
-(Sachs 2003, fig 1)
 
 ---
 
