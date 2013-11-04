@@ -395,7 +395,9 @@ sparsity in graphical models.
 approach from Banerjee et al. (2007.)
 3. Method arrives at at exact result and performs significantly faster
 than previous methods.
-4. Free implementation of the graphical lasso written in fortran and R is
+4. When tested on real data, however, model provides only an approximation
+and fails to predict many of the actual edge conditions.
+5. Free implementation of the graphical lasso written in fortran and R is
 available: `glasso`.
 
 --- .references
