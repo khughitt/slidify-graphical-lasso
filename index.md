@@ -7,6 +7,9 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+github      :
+  user: khughitt
+  repo: slidify-graphical-lasso
 mode        : selfcontained # {standalone, draft}
 --- .segue .dark
 
@@ -55,6 +58,8 @@ Constructing graphical models from data:
 * <span class='blue2'>Model selection</span>: choosing the structure of the 
   graph.
 * <span class='blue2'>Learning</span>: Estimating edge weights from data.
+
+<div class='source'>ESL p626</div>
 
 ![plot of chunk pgm_example](figure/pgm_example.png) 
 
@@ -140,7 +145,7 @@ particular signaling pathway: receptors, co-receptors, etc.
 
 It's not quite a 1:1 process...
 ![Figure 2](assets/img/Sachs_F2.large.jpg)
-(Sachs 2003, fig 2)
+<div class='source'>Sachs 2003; Figure 2</div>
 
 ---
 
@@ -148,6 +153,10 @@ It's not quite a 1:1 process...
 
 Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
 ![Figure 1a](assets/img/Sachs_F1a.large.jpg)
+
+---.segue .dark
+
+## Flow Cytometry
 
 ---
 
@@ -379,6 +388,7 @@ available: `glasso`.
 - J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  <em>Biostatistics</em>  <strong>9</strong>  432-441  <a href="http://dx.doi.org/10.1093/biostatistics/kxm045">10.1093/biostatistics/kxm045</a>
 - Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  <em>The Annals of Statistics</em>  <strong>34</strong>  1436-1462  <a href="http://dx.doi.org/10.1214/009053606000000281">10.1214/009053606000000281</a>
 - K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  <em>Science</em>  <strong>308</strong>  523-529  <a href="http://dx.doi.org/10.1126/science.1105809">10.1126/science.1105809</a>
+- Hastie Trevor,   (2009) The elements of statistical learning data mining, inference, and prediction.
 
 
 ---
@@ -395,18 +405,18 @@ sessionInfo()
 ## Platform: x86_64-unknown-linux-gnu (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C             
-##  [3] LC_TIME=en_US.utf8        LC_COLLATE=en_US.utf8    
-##  [5] LC_MONETARY=en_US.utf8    LC_MESSAGES=en_US.utf8   
-##  [7] LC_PAPER=en_US.utf8       LC_NAME=C                
-##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
-## [11] LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## [1] knitcitations_0.4-7 bibtex_0.3-6        knitr_1.5          
 ## [4] igraph_0.6.5-2      slidify_0.3.3       colorout_1.0-0     
 ## [7] vimcom_0.9-9        setwidth_1.0-3     
 ## 

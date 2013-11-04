@@ -7,6 +7,9 @@ framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+github      :
+  user: khughitt
+  repo: slidify-graphical-lasso
 mode        : selfcontained # {standalone, draft}
 --- .segue .dark
 
@@ -55,6 +58,8 @@ Constructing graphical models from data:
 * <span class='blue2'>Model selection</span>: choosing the structure of the 
   graph.
 * <span class='blue2'>Learning</span>: Estimating edge weights from data.
+
+<div class='source'>ESL p626</div>
 
 ```{r pgm_example, echo=FALSE}
 library(igraph)
@@ -144,7 +149,7 @@ particular signaling pathway: receptors, co-receptors, etc.
 
 It's not quite a 1:1 process...
 ![Figure 2](assets/img/Sachs_F2.large.jpg)
-(Sachs 2003, fig 2)
+<div class='source'>Sachs 2003; Figure 2</div>
 
 ---
 
@@ -152,6 +157,10 @@ It's not quite a 1:1 process...
 
 Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
 ![Figure 1a](assets/img/Sachs_F1a.large.jpg)
+
+---.segue .dark
+
+## Flow Cytometry
 
 ---
 
@@ -382,6 +391,16 @@ citep("10.1093/biostatistics/kxm045")
 citep("10.1126/science.1105809")
 citep('10.1214/009053606000000281')
 citep('10.1016/S0022-1759(00)00229-5')
+citep(bibentry(
+    bibtype   ='Book',
+    author    = c(person('Hastie', 'Trevor', role='aut')),
+    title     = "The elements of statistical learning data mining, inference, and prediction",
+    publisher = "Springer",
+    year      = "2009",
+    address   = "New York",
+    isbn      = "978-0387848570"
+))
+
 ```
 
 ```{r refs_output, echo=FALSE, results='asis'}
