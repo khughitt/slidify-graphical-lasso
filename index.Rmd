@@ -295,6 +295,10 @@ a fixed threshold, set by default at 0.001.
 
 ## An interesting algorithm discussion...
 
+---.segue .dark
+
+## Performance of Graphical Lasso
+
 ---
 
 ## Performance
@@ -323,18 +327,32 @@ COVSEL and 2-10 slower than the approximate method.
 
 ![Figure 1](assets/img/F1.large.jpg)
 
+---.segue .dark
+
+## How does the graphical lasso perform on real-world data?
+
 ---
 
 ## Cell signalling network
 
 To demonstrate the usefulness of the graphical lasso on real-world problems,
-the method is applied to cytometry data from Sachs et al. (2003) 
+the method is applied to cytometry data from Sachs et al. (2003)
 
 ![Figure 2](assets/img/F2.large.jpg)
 
 Figure 2: Original network derived in Sachs et al.
 - $p$ = 11 proteins
 - $n$ = 7466 cells
+
+---
+
+## Cell signalling network
+
+Same network, but from the original Sachs et al. paper: better biological 
+interpretation.
+
+![Sachs figure 3a](assets/img/Sachs_F3a.large.png)
+<div class='source'>Sachs et al. 2005</div>
 
 ---
 
