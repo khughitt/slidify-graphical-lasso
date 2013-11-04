@@ -78,6 +78,8 @@ mean $\mu$ and covariance matrix $\Sigma$.
 
 - If the $ij$th component of $\Theta$ is zero, then variables $i$ and $j$ are
   conditionally independent, given the other variables.
+- This is not necessarily true, however, if data is not MV gaussian! (see
+  talk linked to at end of presentation.)
 
 ### Covariance graphs
 
@@ -395,6 +397,18 @@ than previous methods.
 and fails to predict many of the actual edge conditions.
 5. Free implementation of the graphical lasso written in fortran and R is
 available: `glasso`.
+
+---
+
+## More info
+
+For a more recent (Dec 2012) discussion on this problem, check out this Neural
+Information Processing (NIPS) talk by Po-Ling Loh:
+
+<a href='http://videolectures.net/nips2012_loh_estimation/'>
+    <img src='http://videolectures.net/nips2012_loh_estimation/thumb.jpg' border=0/><br/>
+    No voodoo here! Learning discrete graphical models via inverse covariance estimation
+</a><br/>
 
 --- .references
 

@@ -136,6 +136,8 @@ contains information about the <span class='blue'>partial covariances</span>
 between each pair of nodes conditioned on all other variables (ESL.)</p></li>
 <li><p>If the $ij$th component of \(\Theta\) is zero, then variables \(i\) and \(j\) are
 conditionally independent, given the other variables.</p></li>
+<li><p>This is not necessarily true, however, if data is not MV gaussian! (see
+talk linked to at end of presentation.)</p></li>
 </ul>
 
 <h3>Covariance graphs</h3>
@@ -673,7 +675,24 @@ available: <code>glasso</code>.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="references" id="slide-37" style="background:;">
+      <slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>More info</h2>
+  </hgroup>
+  <article>
+    <p>For a more recent (Dec 2012) discussion on this problem, check out this Neural
+Information Processing (NIPS) talk by Po-Ling Loh:</p>
+
+<p><a href='http://videolectures.net/nips2012_loh_estimation/'>
+    <img src='http://videolectures.net/nips2012_loh_estimation/thumb.jpg' border=0/><br/>
+    No voodoo here! Learning discrete graphical models via inverse covariance estimation
+</a><br/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="references" id="slide-38" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
@@ -690,7 +709,7 @@ available: <code>glasso</code>.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-38" style="background:;">
+      <slide class="" id="slide-39" style="background:;">
   <hgroup>
     <h2>System info</h2>
   </hgroup>
