@@ -52,7 +52,8 @@ chapter 17 for an overview of undirected graphical models.
 
 Constructing graphical models from data:
 
-* <span class='blue2'>Model selection</span>: choosing the structure of the graph.
+* <span class='blue2'>Model selection</span>: choosing the structure of the 
+  graph.
 * <span class='blue2'>Learning</span>: Estimating edge weights from data.
 
 ![plot of chunk pgm_example](figure/pgm_example.png) 
@@ -107,9 +108,10 @@ convey a message from one part of a cell to another.
 
 ### Examples of cell signaling
 
-- Cell to cell communication
+- Cell to cell communication (e.g. quorum sensing)
 - Responding to host (or pathogen) molecules
 - Respond to external physiological, nutrient, etc. conditions
+- Chemotaxis (movement)
 
 ---
 
@@ -117,7 +119,7 @@ convey a message from one part of a cell to another.
 
 ### Cell membrane
 
-Cell signaling often begins at the cell membrane.
+Cell signaling often begins at the cell membrane ("Signal transduction").
 ![cell membrane](assets/img/1000px-Cell_membrane_detailed_diagram_en.svg.png)
 <div class='source'>Source: http://en.wikipedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg</div>
 
@@ -136,7 +138,7 @@ particular signaling pathway: receptors, co-receptors, etc.
 
 ## Cell signalling network
 
-It's not quite a 1:1 process.
+It's not quite a 1:1 process...
 ![Figure 2](assets/img/Sachs_F2.large.jpg)
 (Sachs 2003, fig 2)
 
@@ -146,6 +148,57 @@ It's not quite a 1:1 process.
 
 Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
 ![Figure 1a](assets/img/Sachs_F1a.large.jpg)
+
+---
+
+## Flow Cytometry
+
+Flow cytometry a high-throughput single-cell method that is generally
+used for one of two things:
+
+1. Counting cells
+2. Sorting cells
+
+However, it can also be used to measure many other properties of cells
+(expression, morphology, enzymatic activity, etc.)
+
+![flow cytometry](assets/img/flow-cytometry_500.jpg)
+<div class='source'>http://www.semrock.com/flow-cytometry.aspx</div>
+
+---
+
+## Flow Cytometry
+
+- Molecules of interest (e.g. proteins involved in a signaling cascade) are 
+"tagged" with an antibody containing a fluorescent protein.
+- By using different fluorescent proteins (each of which emits at a different
+  wavelength) multiple proteins can be bound and measured simultaneously.
+
+![flow cytometry antibodies](assets/img/resources_FACS_2_de.jpg)
+<div class='source'>http://www.antibodies-online.com/resources/17/1247/What+is+flow+cytometry+FACS+analysis/</div>
+
+---
+
+## Flow Cytometry
+
+### Multicolor Flow Cytometry
+
+- Advantages
+    1. Quantitative
+    2. Can interrogate levels of multiple molecules at the same time
+    3. Processes many individual cells (large $n$)
+- Disadvantages
+    1. Spectral overlap
+    2. Variable brightness of fluorochromes
+
+---
+
+## Flow Cytometry
+
+### Spectral Overlap
+
+![Fluorochromes](assets/img/1-s2.0-S0022175900002295-gr1.jpg)
+<div class='source'>Baumgarth and Roederer, 2000</div>
 
 ---
 
@@ -213,7 +266,7 @@ is used to determine an exact maximiation.
 follows.
 2. For each $j = 1,2,\ldots p,1,2,\ldots p,\ldots,$ solve the lasso problem:
 <span class='blue'>
-$$ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}$$
+    $$ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}$$
 </span>
    where $b = W^{-1/2}_{11} s_{12}$, which takes as input the inner products 
   $W_{11}$ and $s_{12}$.  This gives a $p -1$ vector solution $\hat{\beta}$. 
@@ -322,6 +375,7 @@ available: `glasso`.
 
 
 
+- Nicole Baumgarth, Mario Roederer,   (2000) A Practical Approach to Multicolor Flow Cytometry For Immunophenotyping.  <em>Journal of Immunological Methods</em>  <strong>243</strong>  77-97  <a href="http://dx.doi.org/10.1016/S0022-1759(00)00229-5">10.1016/S0022-1759(00)00229-5</a>
 - J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  <em>Biostatistics</em>  <strong>9</strong>  432-441  <a href="http://dx.doi.org/10.1093/biostatistics/kxm045">10.1093/biostatistics/kxm045</a>
 - Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  <em>The Annals of Statistics</em>  <strong>34</strong>  1436-1462  <a href="http://dx.doi.org/10.1214/009053606000000281">10.1214/009053606000000281</a>
 - K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  <em>Science</em>  <strong>308</strong>  523-529  <a href="http://dx.doi.org/10.1126/science.1105809">10.1126/science.1105809</a>
@@ -341,26 +395,25 @@ sessionInfo()
 ## Platform: x86_64-unknown-linux-gnu (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+##  [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C             
+##  [3] LC_TIME=en_US.utf8        LC_COLLATE=en_US.utf8    
+##  [5] LC_MONETARY=en_US.utf8    LC_MESSAGES=en_US.utf8   
+##  [7] LC_PAPER=en_US.utf8       LC_NAME=C                
+##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
+## [11] LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] devtools_1.3        knitcitations_0.4-7 bibtex_0.3-6       
-## [4] knitr_1.5           igraph_0.6.5-2      slidify_0.3.3      
-## [7] colorout_1.0-0      vimcom_0.9-9        setwidth_1.0-3     
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## [4] igraph_0.6.5-2      slidify_0.3.3       colorout_1.0-0     
+## [7] vimcom_0.9-9        setwidth_1.0-3     
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
-##  [5] markdown_0.6.3 memoise_0.1    parallel_3.0.2 RCurl_1.95-4.1
-##  [9] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  XML_3.98-1.1  
-## [13] xtable_1.7-1   yaml_2.1.8
+##  [5] markdown_0.6.3 RCurl_1.95-4.1 stringr_0.6.2  tools_3.0.2   
+##  [9] whisker_0.3-2  XML_3.98-1.1   xtable_1.7-1   yaml_2.1.8
 ```
 
 

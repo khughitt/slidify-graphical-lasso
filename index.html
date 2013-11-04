@@ -104,7 +104,8 @@ chapter 17 for an overview of undirected graphical models.</p>
     <p>Constructing graphical models from data:</p>
 
 <ul>
-<li><span class='blue2'>Model selection</span>: choosing the structure of the graph.</li>
+<li><span class='blue2'>Model selection</span>: choosing the structure of the 
+graph.</li>
 <li><span class='blue2'>Learning</span>: Estimating edge weights from data.</li>
 </ul>
 
@@ -193,9 +194,10 @@ convey a message from one part of a cell to another.</p>
     <h3>Examples of cell signaling</h3>
 
 <ul>
-<li>Cell to cell communication</li>
+<li>Cell to cell communication (e.g. quorum sensing)</li>
 <li>Responding to host (or pathogen) molecules</li>
 <li>Respond to external physiological, nutrient, etc. conditions</li>
+<li>Chemotaxis (movement)</li>
 </ul>
 
   </article>
@@ -209,7 +211,7 @@ convey a message from one part of a cell to another.</p>
   <article>
     <h3>Cell membrane</h3>
 
-<p>Cell signaling often begins at the cell membrane.
+<p>Cell signaling often begins at the cell membrane (&quot;Signal transduction&quot;).
 <img src="assets/img/1000px-Cell_membrane_detailed_diagram_en.svg.png" alt="cell membrane"></p>
 
 <div class='source'>Source: http://en.wikipedia.org/wiki/File:Cell_membrane_detailed_diagram_en.svg</div>
@@ -241,7 +243,7 @@ particular signaling pathway: receptors, co-receptors, etc.</p>
     <h2>Cell signalling network</h2>
   </hgroup>
   <article>
-    <p>It&#39;s not quite a 1:1 process.
+    <p>It&#39;s not quite a 1:1 process...
 <img src="assets/img/Sachs_F2.large.jpg" alt="Figure 2">
 (Sachs 2003, fig 2)</p>
 
@@ -263,6 +265,92 @@ particular signaling pathway: receptors, co-receptors, etc.</p>
 
       <slide class="" id="slide-13" style="background:;">
   <hgroup>
+    <h2>Flow Cytometry</h2>
+  </hgroup>
+  <article>
+    <p>Flow cytometry a high-throughput single-cell method that is generally
+used for one of two things:</p>
+
+<ol>
+<li>Counting cells</li>
+<li>Sorting cells</li>
+</ol>
+
+<p>However, it can also be used to measure many other properties of cells
+(expression, morphology, enzymatic activity, etc.)</p>
+
+<p><img src="assets/img/flow-cytometry_500.jpg" alt="flow cytometry"></p>
+
+<div class='source'>http://www.semrock.com/flow-cytometry.aspx</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Flow Cytometry</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Molecules of interest (e.g. proteins involved in a signaling cascade) are 
+&quot;tagged&quot; with an antibody containing a fluorescent protein.</li>
+<li>By using different fluorescent proteins (each of which emits at a different
+wavelength) multiple proteins can be bound and measured simultaneously.</li>
+</ul>
+
+<p><img src="assets/img/resources_FACS_2_de.jpg" alt="flow cytometry antibodies"></p>
+
+<div class='source'>http://www.antibodies-online.com/resources/17/1247/What+is+flow+cytometry+FACS+analysis/</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Flow Cytometry</h2>
+  </hgroup>
+  <article>
+    <h3>Multicolor Flow Cytometry</h3>
+
+<ul>
+<li>Advantages
+
+<ol>
+<li>Quantitative</li>
+<li>Can interrogate levels of multiple molecules at the same time</li>
+<li>Processes many individual cells (large \(n\))</li>
+</ol></li>
+<li>Disadvantages
+
+<ol>
+<li>Spectral overlap</li>
+<li>Variable brightness of fluorochromes</li>
+</ol></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Flow Cytometry</h2>
+  </hgroup>
+  <article>
+    <h3>Spectral Overlap</h3>
+
+<p><img src="assets/img/1-s2.0-S0022175900002295-gr1.jpg" alt="Fluorochromes"></p>
+
+<div class='source'>Baumgarth and Roederer, 2000</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-17" style="background:;">
+  <hgroup>
     <h2>Cell signalling network</h2>
   </hgroup>
   <article>
@@ -273,7 +361,7 @@ particular signaling pathway: receptors, co-receptors, etc.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="segue dark" id="slide-14" style="background:;">
+      <slide class="segue dark" id="slide-18" style="background:;">
   <hgroup>
     <h2>Previous Work on Using the Lasso for Sparse Graphical Models</h2>
   </hgroup>
@@ -283,7 +371,7 @@ particular signaling pathway: receptors, co-receptors, etc.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-15" style="background:;">
+      <slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>Meinshausen and Bühlmann (2006)</h2>
   </hgroup>
@@ -301,7 +389,7 @@ predictors.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-16" style="background:;">
+      <slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Exact solutions</h2>
   </hgroup>
@@ -321,7 +409,7 @@ is used to determine an exact maximiation.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-17" style="background:;">
+      <slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Graphical Lasso</h2>
   </hgroup>
@@ -349,7 +437,7 @@ maximized with respect to the mean parameter \(\mu\).</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="segue dark" id="slide-18" style="background:;">
+      <slide class="segue dark" id="slide-22" style="background:;">
   <hgroup>
     <h2>An interesting methods discussion...</h2>
   </hgroup>
@@ -359,7 +447,7 @@ maximized with respect to the mean parameter \(\mu\).</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-19" style="background:;">
+      <slide class="" id="slide-23" style="background:;">
   <hgroup>
     <h2>Algorithm (Friedman et al. 2007):</h2>
   </hgroup>
@@ -386,7 +474,7 @@ a fixed threshold, set by default at 0.001.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="segue dark" id="slide-20" style="background:;">
+      <slide class="segue dark" id="slide-24" style="background:;">
   <hgroup>
     <h2>An interesting algorithm discussion...</h2>
   </hgroup>
@@ -396,7 +484,7 @@ a fixed threshold, set by default at 0.001.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-21" style="background:;">
+      <slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Performance</h2>
   </hgroup>
@@ -427,7 +515,7 @@ from graph how it will scale to many more features, however).</p></li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-22" style="background:;">
+      <slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Performance</h2>
   </hgroup>
@@ -438,7 +526,7 @@ from graph how it will scale to many more features, however).</p></li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-23" style="background:;">
+      <slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Cell signalling network</h2>
   </hgroup>
@@ -459,7 +547,7 @@ the method is applied to cytometry data from Sachs et al. (2003) </p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-24" style="background:;">
+      <slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Cell signalling network</h2>
   </hgroup>
@@ -472,7 +560,7 @@ the regularization parameter, \(\rho\).
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-25" style="background:;">
+      <slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Cell signalling network</h2>
   </hgroup>
@@ -487,7 +575,7 @@ vector increases and \(\rho\) decreases. (The density of network increases as
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-26" style="background:;">
+      <slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Cell signalling network</h2>
   </hgroup>
@@ -501,7 +589,7 @@ the exact graphical lasso vs. Meinhausen-Buhlmann approximation.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="segue dark" id="slide-27" style="background:;">
+      <slide class="segue dark" id="slide-31" style="background:;">
   <hgroup>
     <h2>Summary</h2>
   </hgroup>
@@ -511,7 +599,7 @@ the exact graphical lasso vs. Meinhausen-Buhlmann approximation.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-28" style="background:;">
+      <slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Summary</h2>
   </hgroup>
@@ -531,12 +619,13 @@ available: <code>glasso</code>.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="references" id="slide-29" style="background:;">
+      <slide class="references" id="slide-33" style="background:;">
   <hgroup>
     <h2>References</h2>
   </hgroup>
   <article>
     <ul>
+<li>Nicole Baumgarth, Mario Roederer,   (2000) A Practical Approach to Multicolor Flow Cytometry For Immunophenotyping.  <em>Journal of Immunological Methods</em>  <strong>243</strong>  77-97  <a href="http://dx.doi.org/10.1016/S0022-1759(00)00229-5">10.1016/S0022-1759(00)00229-5</a></li>
 <li>J. Friedman, T. Hastie, R. Tibshirani,   (2007) Sparse Inverse Covariance Estimation With The Graphical Lasso.  <em>Biostatistics</em>  <strong>9</strong>  432-441  <a href="http://dx.doi.org/10.1093/biostatistics/kxm045">10.1093/biostatistics/kxm045</a></li>
 <li>Nicolai Meinshausen, Peter Bühlmann,   (2006) High-Dimensional Graphs And Variable Selection With The Lasso.  <em>The Annals of Statistics</em>  <strong>34</strong>  1436-1462  <a href="http://dx.doi.org/10.1214/009053606000000281">10.1214/009053606000000281</a></li>
 <li>K. Sachs,   (2005) Causal Protein-Signaling Networks Derived From Multiparameter Single-Cell Data.  <em>Science</em>  <strong>308</strong>  523-529  <a href="http://dx.doi.org/10.1126/science.1105809">10.1126/science.1105809</a></li>
@@ -546,7 +635,7 @@ available: <code>glasso</code>.</li>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-30" style="background:;">
+      <slide class="" id="slide-34" style="background:;">
   <hgroup>
     <h2>System info</h2>
   </hgroup>
@@ -558,26 +647,25 @@ available: <code>glasso</code>.</li>
 ## Platform: x86_64-unknown-linux-gnu (64-bit)
 ## 
 ## locale:
-##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
-##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
-##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
-##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
-##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+##  [1] LC_CTYPE=en_US.utf8       LC_NUMERIC=C             
+##  [3] LC_TIME=en_US.utf8        LC_COLLATE=en_US.utf8    
+##  [5] LC_MONETARY=en_US.utf8    LC_MESSAGES=en_US.utf8   
+##  [7] LC_PAPER=en_US.utf8       LC_NAME=C                
+##  [9] LC_ADDRESS=C              LC_TELEPHONE=C           
+## [11] LC_MEASUREMENT=en_US.utf8 LC_IDENTIFICATION=C      
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] devtools_1.3        knitcitations_0.4-7 bibtex_0.3-6       
-## [4] knitr_1.5           igraph_0.6.5-2      slidify_0.3.3      
-## [7] colorout_1.0-0      vimcom_0.9-9        setwidth_1.0-3     
+## [1] knitcitations_0.5-0 bibtex_0.3-6        knitr_1.5          
+## [4] igraph_0.6.5-2      slidify_0.3.3       colorout_1.0-0     
+## [7] vimcom_0.9-9        setwidth_1.0-3     
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] digest_0.6.3   evaluate_0.5.1 formatR_0.9    httr_0.2      
-##  [5] markdown_0.6.3 memoise_0.1    parallel_3.0.2 RCurl_1.95-4.1
-##  [9] stringr_0.6.2  tools_3.0.2    whisker_0.3-2  XML_3.98-1.1  
-## [13] xtable_1.7-1   yaml_2.1.8
+##  [5] markdown_0.6.3 RCurl_1.95-4.1 stringr_0.6.2  tools_3.0.2   
+##  [9] whisker_0.3-2  XML_3.98-1.1   xtable_1.7-1   yaml_2.1.8
 </code></pre>
 
 <!-- Custom JavaScript -->

@@ -52,7 +52,8 @@ chapter 17 for an overview of undirected graphical models.
 
 Constructing graphical models from data:
 
-* <span class='blue2'>Model selection</span>: choosing the structure of the graph.
+* <span class='blue2'>Model selection</span>: choosing the structure of the 
+  graph.
 * <span class='blue2'>Learning</span>: Estimating edge weights from data.
 
 ```{r pgm_example, echo=FALSE}
@@ -156,11 +157,52 @@ Figure 1A: Network inference using flow cytometry data (Sachs et al 2005)
 
 ## Flow Cytometry
 
-Flow cytometry is generally used for one of two things:
+Flow cytometry a high-throughput single-cell method that is generally
+used for one of two things:
+
 1. Counting cells
 2. Sorting cells
 
+However, it can also be used to measure many other properties of cells
+(expression, morphology, enzymatic activity, etc.)
+
 ![flow cytometry](assets/img/flow-cytometry_500.jpg)
+<div class='source'>http://www.semrock.com/flow-cytometry.aspx</div>
+
+---
+
+## Flow Cytometry
+
+- Molecules of interest (e.g. proteins involved in a signaling cascade) are 
+"tagged" with an antibody containing a fluorescent protein.
+- By using different fluorescent proteins (each of which emits at a different
+  wavelength) multiple proteins can be bound and measured simultaneously.
+
+![flow cytometry antibodies](assets/img/resources_FACS_2_de.jpg)
+<div class='source'>http://www.antibodies-online.com/resources/17/1247/What+is+flow+cytometry+FACS+analysis/</div>
+
+---
+
+## Flow Cytometry
+
+### Multicolor Flow Cytometry
+
+- Advantages
+    1. Quantitative
+    2. Can interrogate levels of multiple molecules at the same time
+    3. Processes many individual cells (large $n$)
+- Disadvantages
+    1. Spectral overlap
+    2. Variable brightness of fluorochromes
+
+---
+
+## Flow Cytometry
+
+### Spectral Overlap
+
+![Fluorochromes](assets/img/1-s2.0-S0022175900002295-gr1.jpg)
+<div class='source'>Baumgarth and Roederer, 2000</div>
 
 ---
 
@@ -228,7 +270,7 @@ is used to determine an exact maximiation.
 follows.
 2. For each $j = 1,2,\ldots p,1,2,\ldots p,\ldots,$ solve the lasso problem:
 <span class='blue'>
-$$ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}$$
+    $$ min_\beta \{ \frac{1}{2} \Vert W^{1/2}_{11} \beta - b\Vert^2 + \rho \Vert \beta \Vert_1 \}$$
 </span>
    where $b = W^{-1/2}_{11} s_{12}$, which takes as input the inner products 
   $W_{11}$ and $s_{12}$.  This gives a $p -1$ vector solution $\hat{\beta}$. 
@@ -339,6 +381,7 @@ cleanbib()
 citep("10.1093/biostatistics/kxm045")
 citep("10.1126/science.1105809")
 citep('10.1214/009053606000000281')
+citep('10.1016/S0022-1759(00)00229-5')
 ```
 
 ```{r refs_output, echo=FALSE, results='asis'}
