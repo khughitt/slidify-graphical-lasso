@@ -1,4 +1,4 @@
-Presentation: [http://khughitt.github.io/slidify-graphical-lasso](http://khughitt.github.io/slidify-graphical-lasso/#1)
+View: [http://khughitt.github.io/slidify-graphical-lasso](http://khughitt.github.io/slidify-graphical-lasso/#1)
 
 Presentation on the article "Sparse inverse covariance estimation with the 
 graphical lasso" by Friedman, Hastie, and Tibshirani (2007)
